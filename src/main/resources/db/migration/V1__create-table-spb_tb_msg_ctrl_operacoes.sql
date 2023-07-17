@@ -1,0 +1,27 @@
+CREATE TABLE EvolutionPro.spb_tb_msg_ctrl_operacoes (
+
+guid_operacao varchar(40) not null,
+cd_msg varchar(10) not null,
+sentido varchar(1)  not null,
+ispb_if varchar(8)  not null,
+ispb_clearing varchar(8)   not null,
+nr_ctrl_if varchar(20)   not null,
+nr_ctrl_clearing varchar(23)   null,
+nuop varchar(23)   not null,
+correl_id varchar(50)   null,
+dt_hr_entrada datetime not null,
+dt_hr_envio datetime null,
+dt_hr_lock datetime null,
+guid_lock varchar(40) default '{00000000-0000-0000-0000-000000000000}' null,
+st_operacao int not null,
+nivelpref char(1)   default '' null,
+nivel_int char(2)   default '' null,
+str_xml text   null,
+id_usuario int null,
+numseq int default 1 not null,
+indrcont char(1)   default 'N' not null,
+dom_spb varchar(5)   default '' not null,
+dt_hr_mq datetime null,
+ds_origem varchar(100)null,
+CONSTRAINT PK_msg_ctrl_operacoes PRIMARY KEY (guid_operacao)
+);
